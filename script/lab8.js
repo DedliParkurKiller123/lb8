@@ -1,5 +1,5 @@
 const body = document.querySelector('body');
-    body.style.backgroundImage='url(./ef7fb1b37078b6a2aef8e40710446bfa.jpg)';
+    body.style.backgroundImage='url(./script/ef7fb1b37078b6a2aef8e40710446bfa.jpg)';
     body.style.backgroundSize='cover';
     body.style.backgroundAttachment='fixed';
 
