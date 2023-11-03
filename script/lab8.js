@@ -10,7 +10,6 @@ const winWin = document.querySelector('#windowWin');
     winWin.style.transform = 'translate(-50%, -50%)';
     winWin.style.zIndex = '-1';
     winWin.style.opacity = 0;
-    winWin.innerHTML = ' ';
     winWin.style.fontSize = '2.5vw';
     winWin.style.textAlign = 'center';
     winWin.style.paddingTop = '10%';
@@ -97,18 +96,7 @@ const form = document.querySelector('#form');
     form.style.transition = '0.5s';
     form.style.boxShadow='5px 5px 5px rgba(0, 0, 0, 0.7)'
     form.style.filter ='blur(3px)';
-/*
-form.addEventListener('mouseenter', ()=>{
-        form.style.boxShadow='10px 10px 10px rgba(0, 0, 0, 0.4)'
-        form.style.width = '800px';
-        form.style.height='520px';
-    });
-form.addEventListener('mouseout', ()=>{
-        form.style.boxShadow='5px 5px 5px rgba(0, 0, 0, 0.7)'
-        form.style.width = '750px';
-        form.style.height='500px';
-    });
-*/
+
 const button = document.querySelector('#button');
     button.style.position = 'absolute';
     button.style.top='50%';
@@ -151,7 +139,6 @@ const panel2 = document.querySelector('#panel2');
     panel2.style.height='100%';
 
 const text1 = document.querySelector('#text1');
-    text1.innerHTML = '';
 
 const text2 = document.querySelector('#text2');
     text2.innerHTML = 'Комп\'ютер';
@@ -170,15 +157,13 @@ const count2 = document.querySelector('#count2');
     let value2 = 0;
 
 const number1 = document.querySelector('#number1');
-    number1.innerHTML = ''; 
 
 const number2 = document.querySelector('#number2');
-    number2.innerHTML = '';
 
 const count = document.querySelectorAll('.count');    
 count.forEach((item)=>{
     item.style.position = 'absolute';
-    item.style.top='35%';
+    item.style.top='40%';
     item.style.left = '50%';
     item.style.transform = 'translate(-50%, -50%)';
     item.style.width = '98%';
@@ -230,21 +215,19 @@ button.onclick=()=>{
     } else if(randomNumber2 > randomNumber1){
         value2++;
     }
-    document.getElementById('count1').innerHTML = value1;
-    document.getElementById('count2').innerHTML = value2;
+    count1.innerHTML = value1;
+    count2.innerHTML = value2;
     if(value1 === 3){
         winWin.innerHTML = 'Ви перемогли!!!';
         winWin.style.backgroundColor = 'rgba(0, 255, 0, 0.4)';
         winWin.style.zIndex = '1';
         winWin.style.opacity = 1;
-
         number1.innerHTML = ''; 
         number2.innerHTML = '';
         value1 = 0; 
         value2 = 0; 
         count1.innerHTML = value1;
         count2.innerHTML = value2;
-
         setTimeout(() => {
             winWin.style.zIndex = '-1';
             winWin.style.opacity = 0;
@@ -254,14 +237,12 @@ button.onclick=()=>{
         winWin.style.backgroundColor = 'rgba(255, 0, 0, 0.4)';
         winWin.style.zIndex = '1';
         winWin.style.opacity = 1;
-        
         number1.innerHTML = ''; 
         number2.innerHTML = ''; 
         value1 = 0; 
         value2 = 0; 
         count1.innerHTML = value1;
         count2.innerHTML = value2;
-
         setTimeout(() => {
             winWin.style.zIndex = '-1';
             winWin.style.opacity = 0;
